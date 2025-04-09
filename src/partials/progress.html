@@ -1,0 +1,78 @@
+<div class="progress-container">
+  <div class="progress-bar-wrapper">
+    <div class="progress-fill" id="progress-fill"></div>
+    <div class="step-points">
+      <span class="point"></span>
+      <span class="point"></span>
+      <span class="point"></span>
+      <span class="point"></span>
+    </div>
+  </div>
+  <p id="step-indicator">Step 1 of 4</p>
+</div>
+
+<div class="form-container">
+  <div class="step active">
+    <h2>Step 1: Choose Vehicle</h2>
+    <p>🚐 Campervan</p>
+    <p>💰 Base Price: <strong>€32.98 / day</strong></p>
+    <div class="buttons">
+      <span></span>
+      <button class="next-btn">Next</button>
+    </div>
+  </div>
+
+  <div class="step">
+    <h2>Step 2: Extras</h2>
+    <div class="checkbox-group">
+      <label
+        ><input type="checkbox" value="15" class="extra" /> GPS (€15.00)</label
+      >
+      <label
+        ><input type="checkbox" value="15" class="extra" /> Child Seat
+        (€15.00)</label
+      >
+      <label
+        ><input type="checkbox" value="15" class="extra" /> Bike Rack
+        (€15.00)</label
+      >
+    </div>
+    <div class="buttons">
+      <button class="prev-btn">Back</button>
+      <button class="next-btn">Next</button>
+    </div>
+  </div>
+
+  <div class="step">
+    <h2>Step 3: Insurance</h2>
+    <label
+      ><input type="radio" name="insurance" value="0" checked /> No Insurance
+      (€0)</label
+    >
+    <label
+      ><input type="radio" name="insurance" value="15" /> Basic (€15.00 /
+      day)</label
+    >
+    <label
+      ><input type="radio" name="insurance" value="25" /> Comprehensive (€25.00
+      / day)</label
+    >
+    <div class="buttons">
+      <button class="prev-btn">Back</button>
+      <button class="next-btn">Next</button>
+    </div>
+  </div>
+
+  <div class="step">
+    <h2>Step 4: Confirm Booking</h2>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Email" />
+    <p>
+      <strong>Total Price: €<span id="total">32.98</span></strong>
+    </p>
+    <div class="buttons">
+      <button class="prev-btn">Back</button>
+      <button onclick="alert('Booking submitted!')">Submit</button>
+    </div>
+  </div>
+</div>
