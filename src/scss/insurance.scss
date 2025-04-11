@@ -30,6 +30,8 @@
   }
 }
 .insurance-item {
+  display: flex;
+
   @include media(desktop) {
     border-radius: 16px;
     padding: 24px;
@@ -49,7 +51,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50 50;
+
     background-color: var(--primary-light);
+    box-shadow: 0 0 0 2px #c5a690;
   }
 
   &:focus {
@@ -62,10 +66,60 @@
     gap: 8px;
   }
 }
+
+.insurance-content {
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fefeff;
+  }
+
+  @include media(desktop) {
+    h4 {
+    }
+  }
+}
+.insurance-content-cost {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fefeff;
+}
 .insurance-item :only-child li {
   display: flex;
   img {
     width: 16px;
     height: 16px;
   }
+}
+.insurance-content ul {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.insurance-content li {
+  display: flex;
+  gap: 4px;
+}
+.insurance-content li p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #fefeff;
+}
+
+.insurance-content-free-info {
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 140%;
+  color: #656566;
 }

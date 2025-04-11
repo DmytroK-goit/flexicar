@@ -2,6 +2,7 @@
 @import './carInfo.scss';
 @import './extraInfo.scss';
 @import './insurance.scss';
+@import './contactUs.scss';
 @import './vite-promo.scss';
 
 :root {
@@ -51,6 +52,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 40px 16px 0px 16px;
+  height: 1930px; //temt
   @include media(desktop) {
     background-color: var(--dark-grey);
     border-radius: 16px;
