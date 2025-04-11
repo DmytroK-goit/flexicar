@@ -1,0 +1,67 @@
+.insurance {
+  padding: 32px 16px 0px 16px;
+  width: 392px;
+  height: 542px;
+  @include media(desktop) {
+    margin-top: 40px;
+    border-top: 1px solid var(--white-20);
+    padding: 16px 0px 0px 0px;
+    width: 920px;
+    height: 356px;
+  }
+}
+.insurance-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--white);
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+.insurance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+.insurance-item {
+  @include media(desktop) {
+    border-radius: 16px;
+    padding: 24px;
+    width: 294px;
+    height: 334px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+.insurance-item {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--white-10);
+
+  &.active {
+    background-image: url(../img/images/BG_insurance.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50 50;
+    background-color: var(--primary-light);
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent);
+  }
+
+  .insurance-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.insurance-item :only-child li {
+  display: flex;
+}
