@@ -64,4 +64,8 @@
 }
 .insurance-item :only-child li {
   display: flex;
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }
