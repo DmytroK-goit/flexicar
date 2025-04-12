@@ -5,6 +5,7 @@
 @import './contactUs.scss';
 @import './footer.scss';
 @import './confirmForm.scss';
+@import './navigation.scss';
 @import './vite-promo.scss';
 
 :root {
@@ -48,14 +49,19 @@ body {
   margin: 0 auto;
   background-color: var(--black);
 }
+body > *:nth-child(2) {
+  align-self: flex-start;
+  margin-left: 228px;
+  margin-top: 64px;
+}
 .head-car-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding: 40px 16px 0px 16px;
-  height: 1930px; //temp
+
   @include media(desktop) {
+    padding: 40px 16px 0px 16px;
     background-color: var(--dark-grey);
     border-radius: 16px;
     padding: 48px 24px;
@@ -78,118 +84,43 @@ body {
     gap: 24px;
   }
 }
-// .progress-container {
-//   max-width: 400px;
-//   margin: 0 auto 20px auto;
-//   text-align: center;
-// }
+.main-booking-block {
+  .step {
+    display: none;
+    flex-direction: column;
 
-// .progress-bar-wrapper {
-//   position: relative;
-//   height: 8px;
-//   background: #e5e7eb;
-//   border-radius: 10px;
-//   margin-bottom: 20px;
-// }
+    &.active {
+      display: flex;
+    }
+  }
 
-// .progress-fill {
-//   position: absolute;
-//   height: 100%;
-//   background-color: #3b82f6;
-//   width: 0%;
-//   border-radius: 10px;
-//   transition: width 0.3s ease;
-// }
+  .step-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
 
-// .step-points {
-//   position: absolute;
-//   width: 100%;
-//   top: -6px;
-//   left: 0;
-//   display: flex;
-//   justify-content: space-between;
-//   pointer-events: none;
-// }
+    @include media(desktop) {
+      display: none;
+    }
+  }
 
-// .point {
-//   width: 14px;
-//   height: 14px;
-//   background-color: #d1d5db;
-//   border-radius: 50%;
-//   transition: background-color 0.3s ease;
-//   z-index: 1;
-// }
-
-// .point.active {
-//   background-color: #3b82f6;
-// }
-
-// .form-container {
-//   max-width: 400px;
-//   margin: auto;
-//   background: #fff;
-//   border-radius: 12px;
-//   padding: 20px;
-//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-// }
-
-// .step {
-//   display: none;
-// }
-
-// .step.active {
-//   display: block;
-//   animation: fadeIn 0.3s ease-in-out;
-// }
-
-// .buttons {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-top: 20px;
-// }
-
-// button {
-//   padding: 10px 16px;
-//   background-color: #3b82f6;
-//   color: white;
-//   border: none;
-//   border-radius: 8px;
-//   cursor: pointer;
-//   flex: 1;
-//   margin: 0 5px;
-// }
-
-// input[type='text'],
-// input[type='email'] {
-//   width: 100%;
-//   padding: 10px;
-//   margin-top: 6px;
-//   border: 1px solid #ccc;
-//   border-radius: 6px;
-// }
-
-// label {
-//   display: block;
-//   margin-top: 10px;
-// }
-
-// .checkbox-group label {
-//   display: flex;
-//   align-items: center;
-//   margin-top: 10px;
-// }
-
-// .checkbox-group input {
-//   margin-right: 10px;
-// }
-
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//     transform: translateY(10px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+  @include media(desktop) {
+    .step {
+      display: flex !important;
+    }
+  }
+}
+.mob-btn-booking {
+  border-radius: 8px;
+  padding: 18px 24px;
+  width: 361px;
+  height: 56px;
+  border: none;
+  background-color: #b68867;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fefeff;
+  @include media(desktop) {
+  }
+}

@@ -1,7 +1,5 @@
 .extra-info {
-  padding: 32px 16px 0px 16px;
-  width: 392px;
-  height: 542px;
+  width: 360px;
   @include media(desktop) {
     margin-top: 40px;
     border-top: 1px solid var(--white-20);
@@ -40,7 +38,6 @@
   width: 176px;
   height: 108px;
   border-radius: 8px;
-  padding: 0px 0px 0px 8px;
   transition: background-color 0.3s ease;
   &.active {
     background-color: var(--primary);
@@ -50,6 +47,7 @@
     height: 24px;
   }
   @include media(desktop) {
+    padding: 0px 0px 0px 8px;
     border-radius: 8px;
     width: 294px;
     height: 77px;

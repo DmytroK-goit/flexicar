@@ -1,28 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const nextButton = document.getElementById('next-section');
-//   const nextButtons = document.querySelectorAll('.next-btn');
-//   let currentSectionIndex = 0;
-
-//   const sections = document.querySelectorAll('.extra-info');
-
-//   function showNextSection() {
-//     if (currentSectionIndex < sections.length - 1) {
-//       sections[currentSectionIndex].classList.remove('active');
-//       currentSectionIndex++;
-//       sections[currentSectionIndex].classList.add('active');
-//     }
-//   }
-//   if (nextButton) {
-//     nextButton.addEventListener('click', function () {
-//       sections[currentSectionIndex].classList.add('active');
-//     });
-//   }
-
-//   nextButtons.forEach(button => {
-//     button.addEventListener('click', showNextSection);
-//   });
-// });
-
 // Toggle btn
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButtons = document.querySelectorAll('.toggle-btn');
@@ -50,3 +25,34 @@ document.querySelectorAll('.insurance-item').forEach(item => {
     item.classList.add('active');
   });
 });
+// Listing booking fork
+const steps = document.querySelectorAll('.step');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
+let currentStep = 0;
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+  });
+
+  prevBtn.disabled = index === 0;
+  nextBtn.textContent = index === steps.length - 1 ? 'Finish' : 'Next';
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+});
+
+showStep(currentStep);

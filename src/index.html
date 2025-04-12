@@ -25,13 +25,29 @@
   </head>
   <body>
     <load ="partials/header.html" />
+    <load ="partials/navigation.html" />
+
     <section class="main-booking-block">
       <div class="head-car-info">
-        <load ="partials/carInfo.html" />
-        <load ="partials/extraInfo.html" />
-        <load ="partials/Insurance.html" />
+        <div class="step step-1 active">
+          <load ="partials/carInfo.html" />
+        </div>
+        <div class="step step-2">
+          <load ="partials/extraInfo.html" />
+        </div>
+        <div class="step step-3">
+          <load ="partials/Insurance.html" />
+        </div>
       </div>
-      <load ="partials/confirmForm.html" />
+      <div class="step step-4">
+        <load ="partials/confirmForm.html" />
+      </div>
+      <div class="step-navigation">
+        <!-- <button type="button" id="prevBtn">Back</button> -->
+        <button class="mob-btn-booking" type="button" id="nextBtn">
+          Proceed to Booking
+        </button>
+      </div>
     </section>
     <load ="partials/contactUs.html" />
 

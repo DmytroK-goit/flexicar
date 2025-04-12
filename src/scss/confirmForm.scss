@@ -1,13 +1,19 @@
 .confirm-order {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @include media(desktop) {
+  }
 }
 .confirm-form {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-left: 24px;
+
+  @include media(desktop) {
+    padding-left: 24px;
+  }
 }
 .confirm-order-title {
   font-family: 'Inter', sans-serif;
@@ -35,32 +41,45 @@
   border: 1px solid #4f4f51;
   border-radius: 8px;
   padding: 12px 14px;
-  width: 448px;
+  width: 361px;
   height: 48px;
   background-color: inherit;
+  @include media(desktop) {
+    width: 448px;
+    height: 48px;
+  }
 }
 .button-cash {
   border-radius: 8px;
   padding: 18px 24px;
-  width: 212px;
+  width: 100%;
   height: 56px;
   border: none;
   background-color: rgba(182, 136, 103, 0.2);
   font-weight: 400;
   font-size: 16px;
   color: #fefeff;
+  @include media(desktop) {
+    width: 212px;
+    height: 56px;
+  }
 }
 .button-card {
   margin-left: 24px;
   border-radius: 8px;
   padding: 18px 24px;
-  width: 212px;
+  width: 100%;
   height: 56px;
   border: none;
   background-color: #b68867;
   font-weight: 400;
   font-size: 16px;
   color: #fefeff;
+  margin-left: 0;
+  @include media(desktop) {
+    width: 212px;
+    height: 56px;
+  }
 }
 .order-summary {
   display: flex;
@@ -68,9 +87,15 @@
   flex-direction: column;
   border-radius: 16px;
   padding: 16px;
-  width: 448px;
+  width: 361px;
   height: 193px;
+
   background-color: rgba(255, 255, 255, 0.04);
+
+  @include media(desktop) {
+    width: 448px;
+    height: 193px;
+  }
 }
 .order-summary-points {
   display: flex;
@@ -154,4 +179,13 @@
 .terms-checkbox-label {
   display: flex;
   flex-direction: row;
+}
+.payment-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  @include media(desktop) {
+    flex-direction: row;
+  }
 }
