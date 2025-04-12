@@ -1,0 +1,139 @@
+.footer {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  width: 393px;
+  height: 393px;
+  background-color: #121214;
+  padding: 40px 16px;
+  @include media(desktop) {
+    justify-content: center;
+    padding: 64px 0px 48px 0px;
+    width: 1920px;
+    height: 306px;
+  }
+}
+.footer-logo-block {
+  p {
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #919192;
+  }
+
+  @include media(desktop) {
+    p {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+.footer-form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: space-between;
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fefeff;
+  }
+  @include media(desktop) {
+  }
+}
+
+.footer-first-block {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 361px;
+  height: 161px;
+  @include media(desktop) {
+    flex-direction: row;
+    align-items: center;
+    width: 1464px;
+    height: 74px;
+  }
+}
+.footer-second-block {
+  margin-top: 64px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 361px;
+  height: 96px;
+  border-top: 1px solid #4f4f51;
+  padding: 32px 0px 0px 0px;
+  width: 361px;
+  height: 96px;
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #919192;
+  }
+  a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #919192;
+  }
+  @include media(desktop) {
+    flex-direction: row;
+    border-top: 1px solid #4f4f51;
+    padding: 32px 0px 0px 0px;
+    width: 1464px;
+    height: 56px;
+  }
+}
+.footer-second-block ul {
+  display: flex;
+  gap: 16px;
+  @include media(desktop) {
+  }
+}
+
+.footer-form {
+  input {
+    border: 1px solid #4f4f51;
+    border-radius: 8px;
+    padding: 12px 14px;
+    width: 237px;
+    height: 44px;
+    background-color: inherit;
+  }
+  @include media(desktop) {
+    input {
+      width: 320px;
+      height: 48px;
+    }
+  }
+}
+.footer-form-btn {
+  border: none;
+  background-color: rgba(182, 136, 103, 0.2);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fefeff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  width: 108px;
+  height: 44px;
+  @include media(desktop) {
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 124px;
+    height: 48px;
+  }
+}

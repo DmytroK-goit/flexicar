@@ -1,0 +1,67 @@
+<section class="confirm-order">
+  <h3>Confirming Order</h3>
+
+  <form class="confirm-form" action="#" method="post" novalidate>
+    <label for="first-name">
+      First Name <span>*</span>
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        placeholder="Enter Your First Name"
+        required
+      />
+    </label>
+
+    <label for="last-name">
+      Last Name <span>*</span>
+      <input
+        type="text"
+        id="last-name"
+        name="last-name"
+        placeholder="Enter Your Last Name"
+        required
+      />
+    </label>
+
+    <label for="email">
+      Email <span>*</span>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="olivia@untitledui.com"
+        required
+      />
+    </label>
+
+    <label for="phone">
+      Phone number <span>*</span>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+1 (555) 000-0000"
+        required
+        pattern="^\+?[0-9\s\-\(\)]+$"
+      />
+    </label>
+
+    <div class="order-summary">
+      <p>Subtotal: $120</p>
+      <p>Taxes: $20</p>
+      <p>Total: $140</p>
+    </div>
+
+    <div class="payment-buttons">
+      <button type="submit" aria-label="Pay with cash">Pay Cash</button>
+      <button
+        type="button"
+        aria-label="Pay with card"
+        onclick="handleCardPayment()"
+      >
+        Pay Card
+      </button>
+    </div>
+  </form>
+</section>
