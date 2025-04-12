@@ -1,9 +1,9 @@
 <section class="confirm-order">
-  <h3>Confirming Order</h3>
+  <h3 class="confirm-order-title">Confirming Order</h3>
 
   <form class="confirm-form" action="#" method="post" novalidate>
-    <label for="first-name">
-      First Name <span>*</span>
+    <label class="confirm-form-label" for="first-name">
+      <p>First Name <span class="required">*</span></p>
       <input
         type="text"
         id="first-name"
@@ -13,8 +13,9 @@
       />
     </label>
 
-    <label for="last-name">
-      Last Name <span>*</span>
+    <label class="confirm-form-label" for="last-name">
+      <p>Last Name <span class="required">*</span></p>
+
       <input
         type="text"
         id="last-name"
@@ -24,8 +25,9 @@
       />
     </label>
 
-    <label for="email">
-      Email <span>*</span>
+    <label class="confirm-form-label" for="email">
+      <p>Email <span class="required">*</span></p>
+
       <input
         type="email"
         id="email"
@@ -35,8 +37,9 @@
       />
     </label>
 
-    <label for="phone">
-      Phone number <span>*</span>
+    <label class="confirm-form-label" for="phone">
+      <p>Phone number <span class="required">*</span></p>
+
       <input
         type="tel"
         id="phone"
@@ -48,14 +51,39 @@
     </label>
 
     <div class="order-summary">
-      <p>Subtotal: $120</p>
-      <p>Taxes: $20</p>
-      <p>Total: $140</p>
+      <div class="order-summary-points">
+        <p>Date</p>
+        <p>Jan 1 | 08:00 - Jan 2 | 20:00</p>
+      </div>
+      <div class="order-summary-points">
+        <p>Location</p>
+        <p>Bratislava Bus... - Bratislava Bus...</p>
+      </div>
+      <div class="order-summary-points">
+        <p>Volkswagen Touareg</p>
+        <p>32,98 EUR</p>
+      </div>
+      <div class="order-summary-points">
+        <p>Basic Insurance</p>
+        <p>15 EUR</p>
+      </div>
+      <div class="order-summary-total">
+        <p>Total</p>
+        <p>62,98 EUR</p>
+      </div>
     </div>
-
+    <div class="terms-checkbox">
+      <input type="checkbox" id="terms" />
+      <label class="terms-checkbox-label" for="terms"
+        >I accept the <a href="#">terms & conditions</a></label
+      >
+    </div>
     <div class="payment-buttons">
-      <button type="submit" aria-label="Pay with cash">Pay Cash</button>
+      <button class="button-cash" type="button" aria-label="Pay with cash">
+        Pay Cash
+      </button>
       <button
+        class="button-card"
         type="button"
         aria-label="Pay with card"
         onclick="handleCardPayment()"
