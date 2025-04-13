@@ -9,9 +9,10 @@
     "preview": "vite preview",
     "build:preview": "vite build && vite preview",
     "predeploy": "npm run build",
-    "deploy": "netlify deploy -p"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "glob": "^8.1.0",
     "netlify-cli": "^17.30.0",
     "sass": "^1.77.6",
