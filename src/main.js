@@ -25,7 +25,7 @@ document.querySelectorAll('.insurance-item').forEach(item => {
     item.classList.add('active');
   });
 });
-// Listing booking fork and progress bar
+// Progress bar
 const steps = document.querySelectorAll('.step');
 const nextBtn = document.getElementById('nextBtn');
 const progressBarWrapper = document.getElementById('progressBarWrapper');
