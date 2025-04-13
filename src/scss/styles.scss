@@ -49,10 +49,10 @@ body {
   margin: 0 auto;
   background-color: var(--black);
 }
-body > *:nth-child(2) {
-  align-self: flex-start;
-  margin-left: 228px;
-  margin-top: 64px;
+.web-nav {
+  margin-top: 40px;
+  width: 1450px;
+  justify-content: start;
 }
 .head-car-info {
   display: flex;
@@ -122,5 +122,116 @@ body > *:nth-child(2) {
   font-size: 16px;
   color: #fefeff;
   @include media(desktop) {
+  }
+}
+// Progress Bar
+.progress-bar-wrapper {
+  width: 100%;
+  display: none;
+  position: relative;
+  background-color: #1e1e20;
+  width: 393px;
+  height: 184px;
+  border-top: 1px solid #4f4f51;
+  @include media(mobile) {
+    display: block;
+  }
+
+  @include media(desktop) {
+    display: none !important;
+  }
+}
+
+.progress-bar {
+  position: relative;
+  height: 6px;
+  background-color: var(--white-10);
+  border-radius: 4px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  height: 100%;
+  background-color: var(--primary);
+  width: 0%;
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+
+.progress-steps {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  transform: translateY(-50%);
+}
+
+.step-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.step-label {
+  margin-top: 8px;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  color: #919192;
+}
+.block-with-car {
+  display: flex;
+  padding: 8px 16px 16px 16px;
+  width: 393px;
+  height: 96px;
+  gap: 16px;
+}
+
+.block-with-car-info {
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 156%;
+    color: #fefeff;
+
+    &:nth-of-type(1) {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 156%;
+      color: #fefeff;
+    }
+
+    &:nth-of-type(2) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #919192;
+      margin-top: 6px;
+    }
+
+    &:nth-of-type(3) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #fefeff;
+    }
   }
 }
